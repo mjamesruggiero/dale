@@ -49,3 +49,9 @@ And the result:
 build_list: current=304.2 KB, peak=317.8 KB
 build_generator: current=0.1 KB, peak=22.4 KB
 ```
+
+# flattening and windowing
+
+* Bounded-buffer windowing works on any iterable (even infinite seqs) since it never indexes or calls `len()`
+* Duck-typed recursion is fine if you branch on `str`/`bytes` exceptions — general rule ("try `iter()`") plus deliberate carve-out is a pattern I should reflect on
+
